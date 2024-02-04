@@ -27,13 +27,13 @@ This project provides a Dockerized version of Squid, a widely-used proxy server.
 ### 1. Pull the Squid Docker Image
 
 ```bash
-docker pull prinako/squid
+docker pull docker pull ghcr.io/prinako/squid-docker:sha256-538febcf88b29dc48350716884055f715e0714305cb6ee3dff2d2a980de64220.sig
 ```
 
 ### 2. Run Squid Container
 
 ```bash
-docker run -d --name squid -p 3128:3128 sameersbn/squid
+docker run -d --name squid -p 3128:3128 sameersbn/squid-docker
 ```
 
 Adjust the port mappings and other options according to your requirements.
@@ -59,7 +59,7 @@ For additional configuration options and customization, refer to the [Squid Docu
 You can customize Squid's configuration by mounting a volume with your own configuration file. For example:
 
 ```bash
-docker run -d --name squid -p 3128:3128 -v /path/to/your/squid.conf:/etc/squid/squid.conf prinako/squid
+docker run -d --name squid -p 3128:3128 -v /path/to/your/squid.conf:/etc/squid/squid.conf prinako/squid-docker
 ```
 
 Replace `/path/to/your/squid.conf` with the path to your custom Squid configuration file.
