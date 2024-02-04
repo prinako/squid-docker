@@ -59,7 +59,7 @@ For additional configuration options and customization, refer to the [Squid Docu
 You can customize Squid's configuration by mounting a volume with your own configuration file. For example:
 
 ```bash
-docker run -d --name squid -p 3128:3128 -v /path/to/your/squid.conf:/etc/squid/squid.conf sameersbn/squid
+docker run -d --name squid -p 3128:3128 -v /path/to/your/squid.conf:/etc/squid/squid.conf prinako/squid
 ```
 
 Replace `/path/to/your/squid.conf` with the path to your custom Squid configuration file.
