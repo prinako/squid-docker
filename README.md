@@ -27,7 +27,7 @@ This project provides a Dockerized version of Squid, a widely-used proxy server.
 ### 1. Pull the Squid Docker Image
 
 ```bash
-docker pull sameersbn/squid
+docker pull prinako/squid
 ```
 
 ### 2. Run Squid Container
