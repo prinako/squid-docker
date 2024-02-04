@@ -2,9 +2,9 @@
 FROM ubuntu:latest
 
 #Install packages
-apt-get update && apt-get install -y \
-    apache2 \
-    squid \
+RUN apt-get update && apt-get install -y \
+    apache2 \ 
+    squid 
 
 #Copy squid.conf
 COPY./squid.conf /etc/squid3/squid.conf
