@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     squid 
 
 #Copy squid.conf
-COPY./squid.conf /etc/squid3/squid.conf
+COPY ./squid.conf /etc/squid3/squid.conf
 
 #Ports exposed:- 3128
 EXPOSE 3128
