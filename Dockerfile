@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 #Copy squid.conf
 COPY ./squid.conf /etc/squid/squid.conf
-COPY ./block-sites.txt /etc/squid/block-site.txt
+COPY ./block-sites.txt /etc/squid/block-sites.txt
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
 RUN chmod 777 /etc/squid/block-sites.txt
