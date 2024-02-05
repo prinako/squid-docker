@@ -15,6 +15,9 @@ COPY ./squid.conf /etc/squid/squid.conf
 COPY ./block-sites.txt /etc/squid/block-sites.txt
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
+VOLUME /var/spool/squid
+VOLUME /etc/squid
+
 RUN chmod 777 /etc/squid/block-sites.txt
 RUN chmod 777 /etc/squid/allow-user.txt
 
