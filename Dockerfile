@@ -15,8 +15,6 @@ COPY ./squid.conf /etc/squid/squid.conf
 COPY ./block-sites.acl /etc/squid/block-sites.acl
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
-RUN mkdir /var/spool/squid
-
 VOLUME /var/spool/squid
 VOLUME /etc/squid
 
