@@ -1,6 +1,10 @@
 # Dockerfile for squid proxy server
 FROM ubuntu:latest
 
+LABEL org.opencontainers.image.source=https://github.com/prinako/squid-docker
+LABEL org.opencontainers.image.description="Dockerfile for squid proxy server"
+LABEL org.opencontainers.image.licenses=MIT
+
 #Install packages
 RUN apt-get update && apt-get install -y \
     apache2 \ 
