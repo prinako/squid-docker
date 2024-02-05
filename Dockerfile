@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 #Copy squid.conf
 COPY ./squid.conf /etc/squid3/squid.conf
-COPY ./block-site.txt /etc/squid3/block-site.txt
+COPY ./block-sites.txt /etc/squid3/block-site.txt
 COPY ./allow-user.txt /etc/squid3/allow-user.txt
 
 #Ports exposed:- 3128
