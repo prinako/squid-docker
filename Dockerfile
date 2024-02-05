@@ -15,6 +15,9 @@ COPY ./squid.conf /etc/squid/squid.conf
 COPY ./block-sites.txt /etc/squid/block-site.txt
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
+RUN chmod 777 /etc/squid/block-sites.txt
+RUN chmod 777 /etc/squid/allow-user.txt
+
 #Ports exposed:- 3128
 EXPOSE 3128
 
