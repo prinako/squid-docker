@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 #Copy squid.conf
 COPY ./squid.conf /etc/squid/squid.conf
-COPY ./block-sites.txt /etc/squid/block-sites.acl
+COPY ./block-sites.acl /etc/squid/block-sites.acl
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
 RUN mkdir /var/spool/squid
