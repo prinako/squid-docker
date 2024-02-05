@@ -1,3 +1,3 @@
 # Blocks access to the domains listed in this file by adding them to the hosts file.
 
-.facebook.com
+*.facebook.com
