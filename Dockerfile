@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 #Copy squid.conf
 COPY ./squid.conf /etc/squid/squid.conf
-COPY ./block-sites.txt /etc/squid/block-sites.txt
+COPY ./block-sites.txt /etc/squid/block-sites.acl
 COPY ./allow-user.txt /etc/squid/allow-user.txt
 
 RUN mkdir /var/spool/squid
@@ -20,8 +20,8 @@ RUN mkdir /var/spool/squid
 VOLUME /var/spool/squid
 VOLUME /etc/squid
 
-RUN chmod 777 /etc/squid/block-sites.txt
-RUN chmod 777 /etc/squid/allow-user.txt
+# RUN chmod 777 /etc/squid/block-sites.txt
+RUN chmod 777 /etc/squid/*
 RUN chmod 777 /var/spool/squid
 
 #Ports exposed:- 3128
