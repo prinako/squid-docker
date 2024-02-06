@@ -1,5 +1,5 @@
 # Squid Docker
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/prinako/squid-docker/Build%20and%20Push%20Docker%20Image?label=Docker%20Build)](https://github.com/prinako/squid-docker/actions/workflows/docker-image.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/prinako/squid-docker/Build%20and%20Push%20Docker%20Image?label=Docker%20Build)](https://github.com/prinako/squid-docker/actions/workflows/ddocker-publish.yml)
 ![Licença](https://img.shields.io/github/license/prinako/squid-docker)
 
 Dockerized Squid proxy server for easy deployment.
