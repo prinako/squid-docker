@@ -17,12 +17,14 @@ RUN apt-get update && apt-get install -y \
     apache2 \ 
     squid
 
+RUN mkdir -p /squid
+RUN chmod 755 /squid
 #Copy squid.conf
-RUN cp /etc/squid/squid.conf /etc/squid/squid.conf.original
+RUN cp /etc/squid/squid.conf /squid/squid.conf.original
 
-COPY ./squid.conf /etc/squid/squid.conf
-COPY ./block-sites.txt /etc/squid/block-sites.txt
-COPY ./allow-user.txt /etc/squid/allow-user.txt
+COPY ./squid.conf /squid/squid.conf
+COPY ./block-sites.txt /squid/block-sites.txt
+COPY ./allow-user.txt /squid/allow-user.txt
 
 
 COPY entrypoint.sh /sbin/entrypoint.sh
