@@ -36,4 +36,4 @@ else
   exec "$@"
 fi
 
-cp /squid/* /etc/squid/
+cp -r /squid/* /etc/squid/
