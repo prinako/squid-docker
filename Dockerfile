@@ -8,23 +8,23 @@ LABEL org.opencontainers.image.licenses=MIT
 #Install packages
 RUN apt-get update && apt-get install -y \
     apache2 \ 
-    squid3
+    squid
 
 #Copy squid.conf
-RUN cp /etc/squid3/squid.conf /etc/squid3/squid.conf.original
+RUN cp /etc/squid/squid.conf /etc/squid/squid.conf.original
 
 COPY ./squid.conf /etc/squid3/squid.conf
-COPY ./block-sites.txt /etc/squid3/block-sites.txt
-COPY ./allow-user.txt /etc/squid3/allow-user.txt
+COPY ./block-sites.txt /etc/squid/block-sites.txt
+COPY ./allow-user.txt /etc/squid/allow-user.txt
 
-VOLUME /var/spool/squid3
-VOLUME /etc/squid3
+VOLUME /var/spool/squid
+VOLUME /etc/squid
 
 # RUN chmod 777 /etc/squid/block-sites.txt
-RUN chmod 777 /etc/squid3/*
-RUN chmod 777 /var/spool/squid3*
+RUN chmod 777 /etc/squid/*
+RUN chmod 777 /var/spool/squid*
 
 #Ports exposed:- 3128
 EXPOSE 3128
 
-CMD ["squid3", "-N"]
+CMD ["squid", "-N"]
